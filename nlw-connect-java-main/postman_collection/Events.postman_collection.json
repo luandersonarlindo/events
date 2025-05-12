@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "e18259f5-22b4-4950-b89b-a2421189f83f",
+		"name": "Events",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40372299"
+	},
+	"item": [
+		{
+			"name": "AddEvents",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Evento de Java 2025\",\r\n  \"location\": \"Online\",\r\n  \"price\": 0.0,\r\n  \"startDate\": \"2025-03-16\",\r\n  \"endDate\": \"2025-03-18\",\r\n  \"startTime\": \"19:00:00\",\r\n  \"endTime\": \"21:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListEvents",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListEventPrettyName",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/events/codecraft-summit-2027",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"events",
+						"codecraft-summit-2027"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddSubscription",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Kawa\",\r\n    \"email\":\"Kawa@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/subscription/codecraft-summit-2027/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subscription",
+						"codecraft-summit-2027",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListRanking",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    { \"name\": \"Hal Jordan\", \"email\": \"hal.jordan@greenlanterncorps.com\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/subscription/codecraft-summit-2028/ranking/30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subscription",
+						"codecraft-summit-2028",
+						"ranking",
+						"30"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
